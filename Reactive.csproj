@@ -55,6 +55,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentScheduler, Version=5.1.0.0, Culture=neutral, PublicKeyToken=b76503528a14ebd1, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentScheduler.5.1.0\lib\net40\FluentScheduler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Humanizer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
       <HintPath>..\packages\Humanizer.Core.2.1.0\lib\netstandard1.0\Humanizer.dll</HintPath>
       <Private>True</Private>
@@ -99,6 +103,7 @@
     <Compile Include="scripts\Framework\Error\ErrorUtils.cs" />
     <Compile Include="scripts\Framework\Error\Logger.cs" />
     <Compile Include="scripts\Framework\Events\CEFEvent.cs" />
+    <Compile Include="scripts\Framework\Jobs\BaseJob.cs" />
     <Compile Include="scripts\Framework\Math\MathHelpers.cs" />
     <Compile Include="scripts\Framework\UI\MessageBox.cs" />
     <Compile Include="scripts\Framework\Version.cs" />
