@@ -95,17 +95,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="scripts\Application.cs" />
     <Compile Include="scripts\Collections\FastList.cs" />
+    <Compile Include="scripts\Environment.cs" />
     <Compile Include="scripts\Framework\Error\ErrorUtils.cs" />
     <Compile Include="scripts\Framework\Error\Logger.cs" />
     <Compile Include="scripts\Framework\Events\CEFEvent.cs" />
     <Compile Include="scripts\Framework\Math\MathHelpers.cs" />
+    <Compile Include="scripts\Framework\UI\MessageBox.cs" />
     <Compile Include="scripts\Framework\Version.cs" />
     <Compile Include="scripts\Plugin\PluginManager.cs" />
+    <Compile Include="scripts\Utils\Extensions\AssemblyExtensions.cs" />
     <Compile Include="scripts\Utils\Extensions\FloatExtensions.cs" />
     <Compile Include="scripts\Utils\Extensions\IntExtensions.cs" />
     <Compile Include="scripts\Utils\Extensions\ListExtension.cs" />
     <Compile Include="scripts\Utils\Extensions\StringExtensions.cs" />
     <Compile Include="scripts\Utils\Randomizer.cs" />
+    <Compile Include="scripts\Utils\SingleInstance.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
