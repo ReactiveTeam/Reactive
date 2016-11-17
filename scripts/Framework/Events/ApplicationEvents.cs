@@ -16,7 +16,7 @@ namespace Reactive.Framework.Events
         /// <param name="e"></param>
         public static void onApplicationExit(object Sender, EventArgs e)
         {
-
+            Plugin.PluginManager.StopHost();
         }
     }
 }

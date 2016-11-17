@@ -33,15 +33,29 @@ namespace Reactive.Plugin
         }
 
         /// <summary>
-        /// This is a test function
+        /// Adds the Start, Stop, and Loop functions from the modules to the job handler
         /// </summary>
-        /// todo: Delete this when Start, Stop, and Tick have been fully implemented.
+        /// todo: Find a way to run this at start of Application
         public void StartHost()
         {
             foreach (var module in pluginsList)
             {
                 Framework.Jobs.JobHandler.AddToStart(module.Start);
+                Framework.Jobs.JobHandler.AddToLoop(module.Tick);
+                Framework.Jobs.JobHandler.AddToStop(module.Stop);
             }
+
+            Framework.Jobs.JobHandler.Start();
+            Framework.Jobs.JobHandler.Update();
         }
+
+        /// <summary>
+        /// Stops the JobHandler
+        /// </summary>
+        public static void StopHost()
+        {
+            Framework.Jobs.JobHandler.Stop();
+        }
+
     }
 }
