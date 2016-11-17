@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Reactive.Framework.Events
+{
+    public class ApplicationEvents
+    {
+
+        public static void onApplicationExit(object Sender, EventArgs e)
+        {
+
+        }
+    }
+}

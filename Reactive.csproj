@@ -102,6 +102,7 @@
     <Compile Include="scripts\Environment.cs" />
     <Compile Include="scripts\Framework\Error\ErrorUtils.cs" />
     <Compile Include="scripts\Framework\Error\Logger.cs" />
+    <Compile Include="scripts\Framework\Events\ApplicationEvents.cs" />
     <Compile Include="scripts\Framework\Events\CEFEvent.cs" />
     <Compile Include="scripts\Framework\Jobs\BaseJob.cs" />
     <Compile Include="scripts\Framework\Math\MathHelpers.cs" />

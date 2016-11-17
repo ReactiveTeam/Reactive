@@ -94,6 +94,8 @@ namespace Reactive
             Thread.CurrentThread.Name = "Main thread";
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
+
+            Application.ApplicationExit += new EventHandler(Reactive.Framework.Events.ApplicationEvents.onApplicationExit);
         }
 
         /// <summary>
