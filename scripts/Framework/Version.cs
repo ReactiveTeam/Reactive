@@ -12,6 +12,9 @@ namespace Reactive.Framework
         Public
     }
 
+    /// <summary>
+    /// Handles the versioning of the program
+    /// </summary>
     [Serializable]
     public struct Version
     {

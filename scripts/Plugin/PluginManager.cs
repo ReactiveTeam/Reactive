@@ -9,6 +9,7 @@ namespace Reactive.Plugin
 {
     /// <summary>
     /// Handles the loading and management of plugins. Using Managed Extensibility Framework (MEF)
+    /// This is the base script for the MALE system.
     /// </summary>
     public class PluginManager
     {
