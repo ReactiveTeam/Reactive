@@ -40,7 +40,7 @@ namespace Reactive.Plugin
         {
             foreach (var module in pluginsList)
             {
-                module.Start();
+                Framework.Jobs.JobHandler.AddToStart(module.Start);
             }
         }
     }

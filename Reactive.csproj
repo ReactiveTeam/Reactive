@@ -105,6 +105,7 @@
     <Compile Include="scripts\Framework\Events\ApplicationEvents.cs" />
     <Compile Include="scripts\Framework\Events\CEFEvent.cs" />
     <Compile Include="scripts\Framework\Jobs\BaseJob.cs" />
+    <Compile Include="scripts\Framework\Jobs\JobHandler.cs" />
     <Compile Include="scripts\Framework\Math\MathHelpers.cs" />
     <Compile Include="scripts\Framework\UI\MessageBox.cs" />
     <Compile Include="scripts\Framework\Version.cs" />
