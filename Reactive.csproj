@@ -106,6 +106,7 @@
     <Compile Include="scripts\Plugin\PluginManager.cs" />
     <Compile Include="scripts\Utils\Extensions\AssemblyExtensions.cs" />
     <Compile Include="scripts\Utils\Extensions\FloatExtensions.cs" />
+    <Compile Include="scripts\Utils\Extensions\GeneralExtensions.cs" />
     <Compile Include="scripts\Utils\Extensions\IntExtensions.cs" />
     <Compile Include="scripts\Utils\Extensions\ListExtension.cs" />
     <Compile Include="scripts\Utils\Extensions\StringExtensions.cs" />
