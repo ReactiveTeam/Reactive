@@ -104,6 +104,7 @@
     <Compile Include="scripts\Framework\UI\MessageBox.cs" />
     <Compile Include="scripts\Framework\Version.cs" />
     <Compile Include="scripts\Plugin\PluginManager.cs" />
+    <Compile Include="scripts\Plugin\PluginSerializer.cs" />
     <Compile Include="scripts\Utils\Extensions\AssemblyExtensions.cs" />
     <Compile Include="scripts\Utils\Extensions\FloatExtensions.cs" />
     <Compile Include="scripts\Utils\Extensions\GeneralExtensions.cs" />
