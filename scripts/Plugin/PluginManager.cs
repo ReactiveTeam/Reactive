@@ -4,6 +4,7 @@ using System.Linq;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.Collections.Generic;
+using Reactive.Framework.Events;
 
 namespace Reactive.Plugin
 {
@@ -32,6 +33,8 @@ namespace Reactive.Plugin
         public PluginManager()
         {
             this.LoadAvailablePlugins();
+
+            ApplicationEvents.addToExitEvent(this.StopHost);
         }
 
         /// <summary>
@@ -103,7 +106,7 @@ namespace Reactive.Plugin
         /// <summary>
         /// Stops the JobHandler
         /// </summary>
-        public static void StopHost()
+        public void StopHost()
         {
             Framework.Jobs.JobHandler.Stop();
         }

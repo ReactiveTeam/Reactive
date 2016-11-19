@@ -32,7 +32,6 @@ namespace Reactive
                 Serial = 0,
                 Accessibility = Accessibility.Internal
             };
-            //System.Windows.Forms.MessageBox.Show(App.Version.ToString());
         }
 
         /// <summary>

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Reactive.Framework.Events
 {
-    public class ApplicationEvents
+    public static class ApplicationEvents
     {
+        private static List<Action> exitEvents = new List<Action>();
 
         /// <summary>
         /// Runs on ApplicationExit
@@ -16,7 +17,22 @@ namespace Reactive.Framework.Events
         /// <param name="e"></param>
         public static void onApplicationExit(object Sender, EventArgs e)
         {
-            Plugin.PluginManager.StopHost();
+            foreach(var events in exitEvents)
+            {
+                events.Invoke();
+            }
+        }
+
+        /// <summary>
+        /// Adds an event to the exitEvent param to be run at the end of Application life cycle
+        /// </summary>
+        /// <param name="exit"></param>
+        public static void addToExitEvent(Action exit)
+        {
+            if(exit != null)
+            {
+                exitEvents.Add(exit);
+            }
         }
     }
 }
