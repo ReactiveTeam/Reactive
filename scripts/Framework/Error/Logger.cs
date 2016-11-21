@@ -49,11 +49,11 @@ namespace Reactive.Framework.Error
             {
                 if (!string.IsNullOrEmpty(popupmessage))
                 {
-                    MessageBox.Show(popupmessage, "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show(popupmessage, "Fatal Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show(message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(message.ToString(), "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             WriteLog(message);
