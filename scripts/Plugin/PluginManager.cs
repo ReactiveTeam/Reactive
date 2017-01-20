@@ -37,6 +37,21 @@ namespace Reactive.Plugin
             ApplicationEvents.addToExitEvent(this.StopHost);
         }
 
+        public int modCount
+        {
+            get
+            {
+                return loadedPlugins.Count;
+            }
+        }
+
+        public int enabledModCount
+        {
+            get
+            {
+                return loadedPlugins.Count;
+            }
+        }
         /// <summary>
         /// Loads the available plugins in the plugin directory
         /// </summary>
@@ -60,6 +75,7 @@ namespace Reactive.Plugin
                     throw new KeyNotFoundException();
 
                 loadedPlugins.Add(plugin);
+                Debug.Log("PluginManager: Added plugin: " + plugin.pluginName);
             }
             catch (KeyNotFoundException e)
             {

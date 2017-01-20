@@ -101,6 +101,9 @@
     <Compile Include="scripts\Framework\Jobs\BaseJob.cs" />
     <Compile Include="scripts\Framework\Jobs\JobHandler.cs" />
     <Compile Include="scripts\Framework\Math\MathHelpers.cs" />
+    <Compile Include="scripts\Framework\Security\Encryption.cs" />
+    <Compile Include="scripts\Framework\Security\SecurityUtils.cs" />
+    <Compile Include="scripts\Framework\Security\SimpleAES.cs" />
     <Compile Include="scripts\Framework\UI\MessageBox.cs" />
     <Compile Include="scripts\Framework\Version.cs" />
     <Compile Include="scripts\Plugin\PluginManager.cs" />

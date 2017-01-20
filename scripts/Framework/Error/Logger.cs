@@ -29,11 +29,18 @@ namespace Reactive.Framework.Error
         /// </summary>
         /// <param name="message">String or object to be converted to string representation for display.</param>
         /// <param name="context">Object to which the message applies.</param>
-        public static void Log(object message,bool showPopup = false)
+        public static void Log(object message,bool showPopup = false, string popupmessage = null)
         {
             if (showPopup)
             {
-                MessageBox.Show(message.ToString(),"Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (!string.IsNullOrEmpty(popupmessage))
+                {
+                    MessageBox.Show(popupmessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show(message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             WriteLog(message);
         }
