@@ -75,11 +75,11 @@ namespace Reactive.Plugin
                     throw new KeyNotFoundException();
 
                 loadedPlugins.Add(plugin);
-                Debug.Log("PluginManager: Added plugin: " + plugin.pluginName);
+                Debug.Log("PluginManager: Registered plugin: " + plugin.pluginName);
             }
             catch (KeyNotFoundException e)
             {
-                Debug.Log("Unable to load plugin: " + plugin.pluginName);
+                Debug.Log("PluginManager: Unable to load plugin: " + plugin.pluginName);
             }
         }
 
@@ -98,14 +98,13 @@ namespace Reactive.Plugin
             }
             catch (KeyNotFoundException e)
             {
-                Debug.Log("Unable to unload plugin: " + plugin.pluginName);
+                Debug.Log("PluginManager: Unable to unload plugin: " + plugin.pluginName);
             }
         }
 
         /// <summary>
         /// Adds the Start, Stop, and Loop functions from the modules to the job handler
         /// </summary>
-        /// todo: Find a way to run this at start of Application
         public void StartHost()
         {
             foreach (var module in loadedPlugins)
