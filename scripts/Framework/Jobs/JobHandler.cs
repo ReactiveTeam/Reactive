@@ -1,10 +1,10 @@
-﻿using Reactive.Framework.Error;
+﻿// Copyright (c) ReactiveTeam. All rights reserved.
+// Licensed under the GPLv3 license. See LICENSE file in the project root for full license information.
+
+using Reactive.Framework.Error;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Reactive.Framework.Jobs
 {
@@ -67,6 +67,7 @@ namespace Reactive.Framework.Jobs
             {
                 func.Invoke();
             }
+            Debug.Log("PluginManager: All plugins initialized.");
         }
 
         /// <summary>
@@ -88,6 +89,7 @@ namespace Reactive.Framework.Jobs
             {
                 func.Invoke();
             }
+            Debug.Log("PluginManager: All plugins successfully stopped.");
         }
 
         private static void LoopCallback(object state)

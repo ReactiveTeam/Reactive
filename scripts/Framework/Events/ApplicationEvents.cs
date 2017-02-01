@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Reactive.Framework.Error;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,7 @@ namespace Reactive.Framework.Events
             if(exit != null)
             {
                 exitEvents.Add(exit);
+                Debug.Log("Events: Registered " + exit.ToString());
             }
         }
     }
