@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Principal;
 using Reactive.Utils;
+using PluginCore;
 
 namespace Reactive
 {
@@ -93,6 +94,11 @@ namespace Reactive
             Thread.CurrentThread.Name = "Main thread";
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
+
+            foreach (IPlugin plugin in App.pluginManager.pluginsList)
+            {
+                Framework.Error.Debug.Log("Loaded " + plugin.pluginName);
+            }
 
             Application.ApplicationExit += new EventHandler(Reactive.Framework.Events.ApplicationEvents.onApplicationExit);
         }
